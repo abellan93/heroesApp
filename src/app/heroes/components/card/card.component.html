@@ -1,0 +1,29 @@
+<mat-card class="hero-card" [routerLink]="['/heroes', hero.id]" >
+  <mat-card-header>
+    <mat-card-title>
+      {{ hero.superhero }}
+    </mat-card-title>
+    <mat-card-subtitle>
+      {{ hero.alter_ego }}
+    </mat-card-subtitle>
+  </mat-card-header>
+
+  <!-- TODO: Add image here -->
+  
+  <mat-card-content class="mt-2">
+    <p>{{ hero.publisher }}</p>
+    <p *ngIf="hero.first_appearance">
+      <strong>Primera aparición:</strong> {{ hero.first_appearance }}
+    </p>
+    <p *ngIf="hero.characters.length > 0">
+      <strong>Personajes:</strong>
+      <mat-chip-listbox>
+        <mat-chip *ngFor="let name of hero.characters.split(',')| slice:0:4">{{
+          name
+        }}</mat-chip>
+      </mat-chip-listbox>
+    </p>
+  </mat-card-content>
+  <mat-divider></mat-divider>
+ 
+</mat-card>
