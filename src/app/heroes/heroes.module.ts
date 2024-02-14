@@ -9,7 +9,7 @@ import { NewPageComponent } from './pages/new-page/new-page.component';
 import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { MaterialModule } from '../material/material.module';
 import { CardComponent } from './components/card/card.component';
-
+import { HeroImagePipe } from './pipes/heroImage.pipe';
 
 @NgModule({
   declarations: [
@@ -18,12 +18,9 @@ import { CardComponent } from './components/card/card.component';
     ListPageComponent,
     NewPageComponent,
     SearchPageComponent,
-    CardComponent
+    CardComponent,
+    HeroImagePipe,
   ],
-  imports: [
-    CommonModule,
-    HeroesRoutingModule,
-    MaterialModule
-  ]
+  imports: [CommonModule, HeroesRoutingModule, MaterialModule],
 })
-export class HeroesModule { }
+export class HeroesModule {}

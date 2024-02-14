@@ -9,7 +9,7 @@
   </mat-card-header>
 
   <!-- TODO: Add image here -->
-  
+  <img  mat-card-image [src]="hero | heroImage" alt={{hero.superhero}}>
   <mat-card-content class="mt-2">
     <p>{{ hero.publisher }}</p>
     <p *ngIf="hero.first_appearance">
